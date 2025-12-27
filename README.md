@@ -43,28 +43,29 @@ Designed to reflect **real-world enterprise DevOps workflows**, this project sho
 
 ## 📂 Repository Structure
 
-.
+end-to-end-cicd-aws/
+│
 ├── app/
-│ ├── app.js
-│ ├── package.json
-│ └── Dockerfile
+│   ├── app.js
+│   ├── package.json
+│   ├── Dockerfile
 │
 ├── terraform/
-│ ├── provider.tf
-│ ├── variables.tf
-│ ├── vpc.tf
-│ ├── security.tf
-│ ├── iam.tf
-│ ├── ecr.tf
-│ ├── cloudwatch.tf
-│ ├── ecs-blue.tf
-│ ├── ecs-green.tf
-│ ├── alb.tf
-│ └── outputs.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── vpc.tf
+│   ├── security.tf
+│   ├── ecr.tf
+│   ├── iam.tf
+│   ├── ecs.tf
+│   ├── alb.tf
+│   ├── cloudwatch.tf
+│   ├── outputs.tf
 │
 ├── Jenkinsfile
-├── architecture.png
-└── README.md
+├── README.md
+└── architecture.png
+
 
 
 ## 🔁 CI/CD Workflow
@@ -97,10 +98,8 @@ ecr-url	ECR Repository URL
 
 ### 3️⃣ Run Jenkins Pipeline
 Create Jenkins Pipeline Job
-
-Connect GitHub repository
-
-Click Build Now
+   -> Connect GitHub repository
+       -> Click Build Now
 
 
 
@@ -114,21 +113,16 @@ http://<ALB-DNS>
 
 ### 🔄 Rollback Strategy
 If Green deployment fails:
+        - ALB listener is reverted to Blue target group
+        - No downtime or data loss
 
-ALB listener is reverted to Blue target group
+📈 Learning Outcomes:
 
-No downtime or data loss
-
-📈 Learning Outcomes
-Designed scalable AWS infrastructure using Terraform
-
-Implemented enterprise-grade CI/CD pipeline
-
-Implemented Blue-Green deployments on ECS
-
-Applied DevOps security and reliability best practices
-
-Hands-on experience with production-like AWS environments
+-Designed scalable AWS infrastructure using Terraform
+-Implemented enterprise-grade CI/CD pipeline
+-Implemented Blue-Green deployments on ECS
+-Applied DevOps security and reliability best practices
+-Hands-on experience with production-like AWS environments
 
 👨‍💻 Author
 Pruthviraj Phadatare
