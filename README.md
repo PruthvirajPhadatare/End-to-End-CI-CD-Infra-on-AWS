@@ -41,14 +41,15 @@ Designed to reflect **real-world enterprise DevOps workflows**, this project sho
 
 ---
 
-## 📂 Repository Structure
 
+## 📂 Repository Structure
+```text
 end-to-end-cicd-aws/
 │
 ├── app/
 │   ├── app.js
 │   ├── package.json
-│   ├── Dockerfile
+│   └── Dockerfile
 │
 ├── terraform/
 │   ├── provider.tf
@@ -60,11 +61,12 @@ end-to-end-cicd-aws/
 │   ├── ecs.tf
 │   ├── alb.tf
 │   ├── cloudwatch.tf
-│   ├── outputs.tf
+│   └── outputs.tf
 │
 ├── Jenkinsfile
 ├── README.md
 └── architecture.png
+
 
 
 
