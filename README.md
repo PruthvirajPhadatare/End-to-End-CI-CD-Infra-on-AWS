@@ -85,7 +85,7 @@ end-to-end-cicd-aws/
 ## 🧪 How to Deploy
 
 ### 1️⃣ Provision Infrastructure
-```bash
+
 cd terraform
 terraform init
 terraform apply
